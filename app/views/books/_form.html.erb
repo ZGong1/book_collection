@@ -17,6 +17,23 @@
   </div>
 
   <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.number_field :price, step: :any %>
+  </div>
+
+  <div>
+    <%= form.label :published_date, "Published date", style: "display: block" %>
+    <%= form.date_select :published_date, 
+        { start_year: 1800, end_year: Date.current.year, include_blank: true },
+        { style: "display: inline-block; margin-right: 5px;" } %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
