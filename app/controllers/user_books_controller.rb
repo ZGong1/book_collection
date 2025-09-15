@@ -13,10 +13,14 @@ class UserBooksController < ApplicationController
   # GET /user_books/new
   def new
     @user_book = UserBook.new
+    @users = User.all
+    @books = Book.all
   end
 
   # GET /user_books/1/edit
   def edit
+    @users = User.all
+    @books = Book.all
   end
 
   # POST /user_books or /user_books.json
